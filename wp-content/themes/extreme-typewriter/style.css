@@ -1,0 +1,329 @@
+/*
+Theme Name: Extreme-Typewriter
+Theme URI: http://lifecheater.ich-geek.de
+Description: The original Lifecheater.ich-geek.de theme.
+Version: 1.1
+Author: Eugen Wirz
+Author URI: http://eugenwirz.de/
+Theme Tags: two columns, black, white, gray, right sidebar, widgets, valid XHTML, widget ready, gravatars
+*/
+
+.aligncenter,
+div.aligncenter {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.alignleft {
+   float: left;
+}
+
+.alignright {
+   float: right;
+}
+
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	font-family: Monospace;
+	font-size: 14px;
+	background: url("./images/background.jpg");
+	background-repeat: repeat-y;
+	background-position: right;
+}
+
+#header {
+	background: #212121;
+	width: 100%;
+	height: 75px;
+}
+
+#header #logolink {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	text-align: right;
+	z-index: 2;
+}
+
+#header #logolink a {
+	color: #757575;
+	text-decoration: none;
+}
+
+#header #logolink h1 {
+	font-size: 39px;
+	line-height: 39px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+#header #logolink small {
+	font-size: 19px;
+	line-height: 19px;
+}
+
+#header #shadow {
+	background: #0F0E0E;
+	width: 100%;
+	height: 5px;
+	position: absolute;
+	top: 70px;
+}
+
+#header #navigation {
+	height: 40px;
+	list-style-type: none;
+	position: absolute;
+	margin-left: 20px;
+}
+
+#header #navigation li {
+	float: left;
+	height: 16px;
+	margin: 39px 10px 0px;
+	padding:10px;
+	-moz-border-radius: 3px 3px 0px 0px;
+	border-radius: 3px 3px 0px 0px;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-top-left-radius: 3px;
+	font-size: 14px;
+}
+
+#header #navigation li a {
+	color: #00CCFF;
+	text-decoration: none;
+}
+
+#header #navigation .current_page_item {
+	background: white;
+	border: 1px solid #0F0E0E;
+	border-bottom: 0px none;
+	height: 15px;
+}
+
+#header #navigation .current_page_item a {
+	color: #757575;
+	font-weight: bold;
+	font-size: 16px;
+	border-bottom: 2px solid #00CCFF;
+}
+
+#header #navigation li a:hover {
+	color: white;
+}
+
+#header #navigation .current_page_item a:hover {
+	color: #757575;
+}
+
+#sidebar {
+	clear: left;
+	position: absolute;
+	right: 0px;
+	top: 70px;
+	width: 221px;
+	padding: 10px;
+	padding-left: 20px;
+	background: #212121;
+	color: #757575;
+}
+
+#sidebar a {
+	color: #00CCFF;
+	text-decoration: none;
+}
+
+#sidebar a:hover {
+	color: white;
+}
+
+#sidebar ul {
+	list-style-type: none;
+}
+
+#sidebar ul li {
+	margin: 5px 0px;
+}
+
+#sidebar ul li h3{
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+#sidebar ul li ul {
+	margin: -5px 0px 0px 10px;
+}
+
+#sidebar ul li ul li {
+	text-transform: none;
+}
+
+#sidebar .credit {
+	padding-top: 10px;
+}
+
+#sidebar .credit cite{
+	font-style: normal;
+	font-size: 12px;
+}
+
+#sidebar #search {
+	background: white;
+	margin-left: -25px;
+	padding: 5px 5px 5px 25px;
+	border: 1px solid #0F0E0E;
+	border-left: 0px none;
+	-moz-border-radius: 0px 3px 3px 0px;
+	border-radius: 0px 3px 3px 0px;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+}
+
+#sidebar #search #s {
+	background: #CFF7FF;
+	border: 1px solid #00CCFF;
+	padding: 5px;
+	width: 180px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#content {
+	width: auto;
+	margin-top: 10px;
+	padding: 30px;
+	padding-right: 300px;
+	color: #212121;
+}
+
+#content .post {
+	margin-bottom: 10px;
+}
+
+#content .post .date {
+	float: left;
+	margin-right: 10px;
+	padding-top: 5px;
+}
+
+#content .post .date p, #content .meta, #content #commentlist li .authorinfo small{
+	font-size: 12px;
+	margin-top: -5px;
+}
+
+#content .post .date p b{
+	font-size: 30px;
+	margin-top: 0px;
+}
+
+#content h2 {
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #212121;
+}
+
+#content .post h2 a {
+	color: #212121;
+	text-decoration: none;
+	border-bottom: none;
+}
+
+#content .post h2 small a{
+	font-size: 14px;
+	color: #00CCFF;
+	margin-left: -10px;
+	text-decoration: none;
+}
+
+#content .post h2 small a:hover {
+	border-bottom: 1px solid #2FA7BF;
+	color: #00CCFF;
+}
+
+#content .post h2 a:hover {
+	color: #4F4F4F;
+}
+
+#content .post .meta{
+	margin-top: -5px;
+	margin-bottom: 10px;
+}
+
+#content .post .contentinner p {
+	margin: 10px 0px;
+}
+
+#content .post .contentinner .storycontent {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+}
+
+#content #commentlist {
+	margin-left: 20px;
+	margin-top: 10px;
+	list-style-type: none;
+}
+
+#content #commentlist li {
+	margin: 10px 0px;
+	padding: 5px;
+	border-left: 2px solid #00CCFF;
+}
+
+#content #commentlist li .authorinfo {
+	float: left;
+	width: 250px;
+	margin: 5px 10px 5px 5px;
+	background: #CFF7FF;
+}
+
+#content #commentlist li .authorinfo h3 a, #content #commentlist li .authorinfo h3 {
+	text-transform: uppercase;
+	color: #212121;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+#content #commentlist li .authorinfo .avatar {
+	float: left;
+	margin-right: 10px;
+}
+
+#content #commentlist li .comment-content {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+}
+
+#content .trackbackrss {
+	margin-top: 5px;
+}
+
+/* Elements */
+
+#content a {
+	color: #212121;
+	text-decoration: none;
+	border-bottom: 1px solid #00CCFF;
+}
+
+#content a:hover {
+	border-bottom: 1px solid #2FA7BF;
+}
+
+a img {
+	border: 0px none;
+}
+
+blockquote {
+	border-left: 2px solid #00CCFF;
+	padding: 5px;
+	margin: 5px 0px 5px 20px;
+	color: #5F5F5F;
+}

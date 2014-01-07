@@ -1,0 +1,15 @@
+#project_users label,#project_details label{color:black;}
+
+
+#project_users table tr td:first-child{width:10%;}
+
+
+#project_users select,#project_details select{width:60px;}
+
+.amount_right{float:right;}
+
+
+
+#project_attachments .actions {width:28px;text-align:right;}
+.delete-att, .delete-att:hover{border-bottom-color: #FF0000;color: #FF0000;}
+.no-attachments {text-align:center;}

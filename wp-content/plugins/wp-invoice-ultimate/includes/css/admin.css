@@ -1,0 +1,20 @@
+#invoice_client label,#invoice_details label{color:black;}
+
+#invoice_client select {
+	width:100%;
+}
+
+
+
+#invoice_items table td{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.wpiu_delete_item img {
+	margin-top:3px;
+}
+
+#invoice_trans table {
+}
+#invoice_trans th, #invoice_trans td:last-child{
+}
