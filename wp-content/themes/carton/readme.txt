@@ -38,6 +38,15 @@ License: [[http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL|SIL O
 
 == CHANGELOG ==
 
+11/02/2013 v1.0.5
+* Fixed responsive video script
+* Removed false features from upgrade page
+* Fixed featured image size
+* Updated footer credit
+
+11/02/2013 v1.0.4.2
+* Removed message bar
+
 11/02/2013 v1.0.4.1
 * Fix for pro link
 * Fix for message bar using MP6

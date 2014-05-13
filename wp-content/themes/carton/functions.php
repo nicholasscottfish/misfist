@@ -16,7 +16,6 @@ define( 'BAVOTASAN_THEME_NAME', $bavotasan_theme_data->Name );
  */
 require( BAVOTASAN_THEME_TEMPLATE . '/library/theme-options.php' ); // Functions for theme options page
 require( BAVOTASAN_THEME_TEMPLATE . '/library/preview-pro.php' ); // Preview Carton Pro
-require( BAVOTASAN_THEME_TEMPLATE . '/library/message-bar.php' ); // Functions for message bar
 
 /**
  * Setting up the content width variable

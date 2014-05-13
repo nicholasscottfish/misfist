@@ -1,7 +1,7 @@
 <?php
 add_action( 'after_setup_theme', 'bartleby_theme_setup' );
 function bartleby_theme_setup() {
-require_once ( get_stylesheet_directory() . '/theme-options.php' );
+require_once ( get_template_directory() . '/theme-options.php' );
 register_nav_menu( 'main-menu', __( 'Main Menu', 'bartleby' ) );
 register_nav_menu( 'bottom-menu', __( 'Footer Menu', 'bartleby' ) );
 add_theme_support( 'automatic-feed-links' );

@@ -34,14 +34,23 @@ class Bavotasan_Preview_Pro {
 	public function bavotasan_preview_pro() {
 		?>
 		<style>
+		.about-wrap h1,
+		.about-text {
+			margin-right: 0;
+		}
+
+		.about-wrap .feature-section img {
+			max-width: 65%;
+		}
+
 		.about-wrap .feature-section.images-stagger-right img {
 			float: right;
-			margin: 0 5px 12px 2em;
+			margin: 0 0 12px 2em;
 		}
 
 		.about-wrap .feature-section.images-stagger-left img {
 			float: left;
-			margin: 0 2em 12px 5px;
+			margin: 0 2em 12px 0;
 		}
 
 		.about-wrap .feature-section img {
@@ -51,6 +60,12 @@ class Bavotasan_Preview_Pro {
 			box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 			-webkit-corder-radius: 3px;
 			border-radius: 3px;
+		}
+
+		@media (max-width: 768px) {
+			.about-wrap .feature-section img {
+				max-width: 100%;
+			}
 		}
 		</style>
 		<div class="wrap about-wrap" id="custom-background">
@@ -98,17 +113,6 @@ class Bavotasan_Preview_Pro {
 
 			<div class="changelog">
 				<h3><?php _e( 'Even More Theme Options', 'carton' ); ?></h3>
-				<div class="feature-section col two-col">
-					<div>
-						<h4><?php _e( 'Full Width Posts/Pages', 'carton' ); ?></h4>
-						<p><?php _e( 'Each page/post has an option to remove both sidebars so you can use the full width of your site to display whatever you want.', 'carton' ); ?></p>
-					</div>
-					<div class="last-feature">
-						<h4><?php _e( 'Multiple Sidebar Layouts', 'carton' ); ?></h4>
-						<p><?php _e( 'Sometimes one sidebar just isn\'t enough, so add a second one and place it where you want.', 'carton' ); ?></p>
-					</div>
-				</div>
-
 				<div class="feature-section col two-col">
 					<div>
 						<h4><?php _e( 'Twitter Bootstrap Shortcodes', 'carton' ); ?></h4>

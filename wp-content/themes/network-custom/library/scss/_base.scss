@@ -49,12 +49,12 @@ style a page via class
 	}
 
 	section.sites-list {
-		width: 100%;
-		display: -ms-flexbox;   /* MID: IE 10 */
-		display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
-		display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
-		flex-wrap: wrap;
-		justify-content: space-between;
+		// width: 100%;
+		// display: -ms-flexbox;   /* MID: IE 10 */
+		// display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
+		// display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+		// flex-wrap: wrap;
+		// justify-content: space-between;
 		[class*="entypo-"]:before {
 		  font-size: 1.25em;
 		  padding-right: .25em;
@@ -64,9 +64,9 @@ style a page via class
 			width: 30%;
 			flex: 0, 1, auto;
 			padding: .5em 1em;
-			border-radius: .5em;
+			// border-radius: .5em;
 			&.site-entry {
-				border: 1px solid $light-gray;
+				// border: 1px solid $light-gray;
 			}
 		}
 		header {
@@ -75,8 +75,8 @@ style a page via class
 			}
 		}
 		section {
-			border-top: 1px solid $light-gray;
-			border-bottom: 1px solid $light-gray;
+			// border-top: 1px solid $light-gray;
+			// border-bottom: 1px solid $light-gray;
 			padding: .5em 0;
 			margin: .5em 0;
 			a.post-title {
@@ -272,6 +272,7 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
+header {}
 .header {}
 
 	#logo {}
@@ -360,12 +361,15 @@ and more scalable.
 } /* end .nav */
 
 
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
+
+
 #content {
-	margin-top: 2.2em;
+	// margin-top: 2.2em;
 }
 
 		.hentry {
@@ -520,6 +524,40 @@ POSTS & CONTENT STYLES
 		.size-large {}
 		.size-medium {}
 		.size-thumbnail {}
+
+.posts-list {
+	.meta {
+		.post-author {
+			display: none;
+		}
+		.blog-name,
+		.post-date {
+			// display: inline-block;
+		}	
+	}
+
+	.news-list {
+		margin-top: 0;
+		li {
+			margin-bottom: 2em;
+		}
+		p {
+			&.post-excerpt {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.sites-list {
+	article {
+		&.site-entry {
+			margin-bottom: 2em;
+		}
+	}
+}
+
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -883,7 +921,6 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-}
 
 	/*
 	if you checked out the link above:
@@ -904,6 +941,12 @@ FOOTER STYLES
 
 	} /* end .footer-links */
 
+	.copyleft {
+		img {
+			height: 35px;
+			width: auto;
+		}
+	}
 
-	.copyright {}
+}
 

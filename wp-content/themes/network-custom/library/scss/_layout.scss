@@ -1,0 +1,36 @@
+// CONTAINERS 
+
+
+// base
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+$grid-columns: 6;
+
+$medium: new-breakpoint(max-width 720px $grid-columns);
+$mobile: new-breakpoint(max-width 500px $grid-columns);
+$full: new-breakpoint(max-width 1200px $grid-columns);
+
+header,
+main,
+footer {
+    @include clearfix;
+    @include outer-container;
+}
+
+section.network-listings {
+  // @include outer-container;
+  .sites-list {
+    @include span-columns(2);
+  }
+  .posts-list {
+    @include span-columns(4);
+  }
+}
+
