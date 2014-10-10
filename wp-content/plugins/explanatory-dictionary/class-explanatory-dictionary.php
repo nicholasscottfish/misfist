@@ -930,36 +930,31 @@ class Explanatory_Dictionary {
 			$content = preg_replace( '/\~' . $key . '\~/', $html, $content); // passes again for any matches inside matches!
 		}
 		
-		if(count($definitions) > 0 ) {
-			// Add the matched definitions
-			$defs = '
-				<aside id="explanatory-dictionary-page-definitions">
-					<h2> ' . __( 'Definitioner', $this->plugin_slug ) . ' </h2>
-					<dl>
-			';
-				
+		if( count( $definitions ) > 0 ) {
+			//Add the matched definitions
+            		global $defs;
+
+			$defs .= '';
+
 			foreach( $definitions as $definition ) {
 				$defs .= '
 					<dt class="explanatory-dictionary-definition-' . $definition['id'] . '">' . $definition['word'] . '</dt>
-					<dd class="explanatory-dictionary-definition-' . $definition['id'] . '">' . $definition['explanation'] . '</dd>
+					<dd class="explanatory-dictionary-definition-' . $definition['id'] . '">' . do_shortcode( $definition['explanation'] ) . '</dd>
 				';
 			}
-				
-			// Add the definitions to the end of the_content
-			$defs .= '
-					</dl>
-				</aside>
-				<div id="explanatory-dictionary-tooltip" style="display: none">
-					<span class="explanatory-dictionary-tooltip-top"></span>
-					<span class="explanatory-dictionary-tooltip-content"></span>
-					<span class="explanatory-dictionary-tooltip-bottom-safe-zone">
-						<span class="explanatory-dictionary-tooltip-bottom"></span>
-						<span class="explanatory-dictionary-tooltip-bottom-border"></span>
-					</span>
-				</div>
-			';
+
 			$this->definitioner = $defs;
-			//$content = $content;
+			
+			// enqueue the script because we have definitions
+			wp_enqueue_script( self::$plugin_slug_safe . '-qtip' );
+			wp_enqueue_style( self::$plugin_slug_safe . '-qtip' );
+			
+			wp_enqueue_script( self::$plugin_slug_safe . '-qtip-script' );
+			
+			if( 'no' === $settings_list['_external_css_file'] ) {
+				wp_enqueue_style( self::$plugin_slug_safe . '-custom-settings' );
+			}
+			
 		}
 		return $content;
 	}
@@ -969,9 +964,24 @@ class Explanatory_Dictionary {
 	 * 
 	 * @since 4.0.1
 	 */
-	public function add_definitioner()
-	{
-		echo $this->definitioner;
+	public function add_definitioner() {
+		if( !empty( $this->definitioner ) ) {
+            $definitioner = '
+				<aside id="explanatory-dictionary-page-definitions">
+					<h2> ' . __( 'Definitioner', self::$plugin_slug ) . ' </h2>
+					<dl>
+			';
+
+            $definitioner .= $this->definitioner;
+
+            // Add the definitions to the end of the_content
+            $definitioner .= '
+					</dl>
+				</aside>
+			';
+
+			echo $definitioner;
+		}
 	}
 	
 	/**
